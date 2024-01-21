@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #061b29 !important;
 }
 
 nav {
@@ -140,6 +144,197 @@ nav {
         0 0 100px cyan, 0 0 200px cyan;
 }
 
+@media only screen and (max-width: 650px) {
+    .home {
+        position: relative;
+        width: 100%;
+        justify-content: space-between;
+        height: 70vh;
+        background: url(k1.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        padding: 70px 10% 0;
+    }
+}
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    color: white;
+
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+/* Skills */
+
+#skills{
+    height:300vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #061b29;
+    color: white;
+}
+
+.container1 {
+    /* width: 600px;
+    height: 500px; */
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.bar {
+    font-size: 23px;
+}
+
+.Technical-bars .bar {
+    margin-top: 40px 0;
+}
+
+.Technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.Technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.Technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+
+
+.Technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+    transform: scalex (0);
+    transform-origin: left;
+}
+
+@keyframes animate {
+    100% {
+        transform: scalex(1);
+    }
+}
+
+.Technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate is 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scalex (0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 95%;
+}
+
+.progress-line.css span {
+    width: 95%;
+}
+
+.progress-line.javascript span {
+    width: 90%;
+}
+
+.progress-line.python span {
+    width: 70%;
+}
+
+.progress-line.react span {
+    width: 80%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.55s linear forwards;
+    opacity: 0;
+}
+
+.progress-line.html span::after {
+    content: "95%";
+}
+
+.progress-line.css span::after {
+    content: "95%";
+}
+
+.progress-line.javascript ::after {
+    content: "90%";
+}
+
+.progress-line.python span::after {
+    content: "70%";
+}
+
+.progress-line.react span::after {
+    content: "80%";
+}
+
+.progress-line spah::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% { 
+        opacity: 1;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes slideTop {
     0% {
         transform: translateY(100px);
@@ -178,6 +373,7 @@ nav {
 
 
 
+
 /* about */
 /* #about h1{
 margin-bottom: 80vh;
@@ -188,7 +384,18 @@ margin-bottom: 80vh;
     justify-content: center;
     align-items: center;
     background-color: gray;
+    color: white;
 
+}
+
+.abouttext h1 {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 500px;
+}
+
+.abouttext span {
+    color: #0ef;
 }
 
 .circle {
@@ -241,6 +448,8 @@ margin-bottom: 80vh;
 .circle .content {
     opacity: 0;
 }
+
+/* media screen  */
 
 @media screen and (max-width: 576px) {
     .circle {
@@ -295,40 +504,10 @@ margin-bottom: 80vh;
 
 }
 
-/* Skills */
-
-#skills {
-    height: 100vh;
-    padding-top: 5%;
-    background: #e5e5e5;
-}
-
-#skills .container {
-    margin-top: 4%;
-}
-
-label {
-    font-size: 20px;
-}
-
-.progress {
-    height: 30px !important;
-    box-shadow: 2px 4px 5px gray, -2px -2px 5px white;
-    -webkit-box-shadow: 2px 4px 5px gray, -2px -2px 5px white;
-    /* Safari and Chrome */
-    -moz-box-shadow: 2px 4px 5px gray, -2px -2px 5px white;
-    /* Firefox */
-
-}
-
-.progress:hover {
-    box-shadow: 2px 4px 5px white, -2px -2px 5px gray;
-}
-
 /* project */
 
 #project {
-    height: 100%;
+    background-color: white;
 }
 
 #project .control ul li {
@@ -396,11 +575,19 @@ label {
     box-shadow: 15px 20px 10px rgba(0, 0, 0, .4);
 }
 
-/* @media only screen and (max-width: 1024px){
-    #contact{
-        height: 1000px;
+@media only screen and (max-width: 1024px) {
+    #contact {
+        padding-top: 5%;
+        background-color: rgb(169, 167, 167);
+        height: 125vh;
     }
-} */
+
+    #contact iframe {
+        box-shadow: 15px 20px 10px rgba(0, 0, 0, .4);
+        width: 100%;
+        height: 300px;
+    }
+}
 
 
 /* login */
@@ -447,6 +634,8 @@ h4 {
     font-family: 800 !important;
 }
 
+/* 
+media screen */
 @media only screen and (max-width: 1024px) {
     .mx-auto {
         width: 75%;
@@ -532,6 +721,8 @@ footer {
     margin: 0px 5px;
     color: #0ef;
 }
+
+/* media screen */
 
 @media (max-width:700px) {
     .footerNav ul {
