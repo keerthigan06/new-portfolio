@@ -632,63 +632,104 @@ margin-bottom: 80vh;
 
 /* project */
 
-#project {
-    background-color: white;
-}
-
-#project .control ul li {
-    list-style: none;
-    background-color: black;
-    padding: 5px 15px;
-    color: white;
-    display: inline-block;
-    cursor: pointer;
-    letter-spacing: 2px;
-}
-
-#project .item {
+.port-text {
+    padding: 2rem 0;
+    text-align: center;
+  }
+.portfolios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+  }
+  .portfolios .portfolio-item {
     position: relative;
-}
-
-#project .item:hover {
-    -webkit-box-shadow: -18px 3px 109px -65px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -18px 3px 109px -65px rgba(0, 0, 0, 0.75);
-    box-shadow: -18px 3px 109px -65px rgba(0, 0, 0, 0.75);
-    transition: 0.5s;
-}
-
-#project .item span {
+    border-radius: 15px;
+  }
+  .portfolios .portfolio-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  .portfolios .portfolio-item .hover-items {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
     position: absolute;
-    top: 40%;
-    left: 45%;
-    font-size: 40px;
-    color: black;
-    cursor: pointer;
-    opacity: 0;
-}
-
-#project .item:hover span {
-    opacity: 1;
-    transition: 0.5s;
-}
-
-#project .item:before {
-    content: "";
     left: 0;
     top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(238, 235, 230, 0.644);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     opacity: 0;
-    position: absolute;
-}
-
-#project .item:hover:before {
+    transform: scale(0);
+    transition: all 0.4s ease-in-out;
+  }
+  .portfolios .portfolio-item .hover-items h3 {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+  }
+  .portfolios .portfolio-item .hover-items .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon {
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon i {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin: 0 1rem;
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon:hover {
+    background-color: var(--color-white);
+  }
+  .portfolios .portfolio-item .hover-items .icons .icon:hover i {
+    color: var(--color-primary);
+  }
+  
+  .portfolio-item:hover .hover-items {
     opacity: 1;
-    transition: 0.3s;
-
-}
-
+    transform: scale(1);
+  }
+  
+  .main-title {
+    text-align: center;
+  }
+  .main-title h2 {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  .main-title h2 span {
+    color: var(--color-secondary);
+  }
+  .main-title h2 .bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--color-grey-5);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    font-weight: 800;
+    font-size: 6.3rem;
+  }
 /* contact */
 
 :root {
@@ -735,15 +776,6 @@ margin-bottom: 80vh;
     padding: 3rem 18rem;
 }
 
-@keyframes appear {
-    0% {
-        transform: translateY(-100%) scaleY(0);
-    }
-
-    100% {
-        transform: translateY(0) scaleY(1);
-    }
-}
 
 .contact-content-con {
     display: flex;
@@ -858,6 +890,7 @@ margin-bottom: 80vh;
     justify-content: flex-start;
 }
 
+
 /*Independed components*/
 .btn-con {
     display: flex;
@@ -920,6 +953,7 @@ margin-bottom: 80vh;
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 700;
+    color: white;
 }
 
 .main-title h2 span {
@@ -937,11 +971,11 @@ margin-bottom: 80vh;
     font-weight: 800;
     font-size: 6.3rem;
 }
+.port-text{
+    color: white;
+}
 
-@media screen and (max-width: 1432px) {
-    .container {
-        padding: 7rem 11rem;
-    }
+@media screen and (max-width: 1024px) {
 
     .contact-content-con {
         flex-direction: column;
