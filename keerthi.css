@@ -1125,7 +1125,7 @@ margin-bottom: 80vh;
 }
 @media only screen and (max-width: 899px) {
     .fcontact {
-        padding: 3rem 2rem;
+        padding: 30px 20px;
     }
     .contact-content-con {
         flex-direction: column;
@@ -1136,7 +1136,11 @@ margin-bottom: 80vh;
     }
     
 }
-
+@media only screen and (max-width: 410px) {
+    .contact-item #mobile{
+        font-size: 10px;
+    }
+}
 
 /* login */
 
