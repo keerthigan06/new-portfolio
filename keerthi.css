@@ -1136,11 +1136,11 @@ margin-bottom: 80vh;
     }
     
 }
-@media only screen and (max-width: 410px) {
+/* @media only screen and (max-width: 410px) {
     .contact-item #mobile{
         font-size: 10px;
     }
-}
+} */
 
 /* login */
 
